@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html xmlns:og="http://ogp.me/ns#">
+  <head>
+<meta charset="utf-8">
+<title><?php echo $key; ?></title>
+<meta name="description" content="<?php echo $description; ?>">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="<?php echo $canonical; ?>" />
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="//code.jquery.com/jquery.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<style type="text/css">
+body {
+  padding-top: 70px;
+  padding-bottom: 10px;
+  overflow-y: scroll;
+}
+.FormWarning {
+  color: red;
+}
+</style>
+<!--[if lt IE 9]><script src="html5.js"></script><![endif]-->
+  </head>>
+  </head>
+ <center> <!--Start Edu-Profit.com code-->
+<a href="http://essaypedia.com/order.html?pid=5266">
+<img src="http://www.edu-profit.com/images/ep1020x350-stroked.gif" style="border: 0;"/>
+</a>
+<!--End Edu-Profit.com code--> </center>
+
+<body id="body">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+<a class="navbar-brand" href="<?php echo $script; ?>"><?php echo $host; ?></a>
+        </div>
+      </div>
+    </div>
+    
+
+<div class="container" role="main">
+	
+<div class="row">
+<div class="col-md-8">
+<div class="panel panel-default">
+  <div class="panel-heading"><h1><?php echo $key; ?></h1></div>
+<div class="panel-body">
+<?php echo $content; ?>
+<?php
+// пример вывода ссылок на страницы поиска по словам, типа мини "облако тегов"
+if (@$_GET[$get_page] != '' AND $ufurl == '1') {
+$arrtags = explode(' ', $key);
+echo 'Tags: ';
+foreach ($arrtags as $tags) {
+echo '<a href="/tag/'.urlencode(UserFriendlyURLs(trim($tags))).'/">'.trim($tags).'</a>, ';
+}
+}
+?>
+</div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading"><h2>Foto:</h2></div>
+<div class="panel-body text-center"><?php echo $foto; ?></div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading"><h2>Video:</h2></div>
+<div class="panel-body text-center"><?php echo $video; ?></div>
+</div>
+
+</div><div class="col-md-4">
+<!--noindex--><div class="panel panel-default">
+  <div class="panel-heading">Search</div>
+  <div class="panel-body">
+<form role="form" action="<?php echo $script; ?>" method="get">
+ <div class="input-group">
+	<input type="text" name="<?php echo $get_search; ?>" class="form-control">
+  <span class="input-group-btn">
+  <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+  </span>
+  </div>
+</form>
+  </div></div><!--/noindex-->
+<div class="panel panel-default">
+  <div class="panel-heading">Menu:</div>
+ <div class="panel-body"><?php echo $link; ?></div>
+ <div class="panel-body"><?php echo @$cnt[11]; ?></div>
+ </div>
+
+<hr>
+<footer>
+<!--Start Edu-Profit.com code-->
+<a href="http://essaypedia.com/order.html?pid=5266">
+<img src="http://www.edu-profit.com/images/ep1020x350-stroked.gif" style="border: 0;"/>
+</a>
+<!--End Edu-Profit.com code-->
+</footer>
+</div>
+</body>
+</html>
